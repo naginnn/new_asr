@@ -44,7 +44,9 @@ class Ui_MainWindow(object):
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
 
-
+        self.pushButton = QtWidgets.QPushButton(self.centralwidget)
+        self.pushButton.setGeometry(QtCore.QRect(490, 680, 141, 31))
+        self.pushButton.setObjectName("pushButton")
 
         self.textEdit = QtWidgets.QTextEdit(self.centralwidget)
         self.textEdit.setGeometry(QtCore.QRect(190, 680, 141, 31))
@@ -56,60 +58,10 @@ class Ui_MainWindow(object):
         self.textEdit_2.setObjectName("textEdit_2")
         self.textEdit_2.setText("1")
 
-        # Соединить
-        self.pushButton = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton.setGeometry(QtCore.QRect(490, 680, 141, 31))
-        self.pushButton.setObjectName("pushButton")
-        # Разъединить
         self.pushButton_2 = QtWidgets.QPushButton(self.centralwidget)
         self.pushButton_2.setEnabled(False)
         self.pushButton_2.setGeometry(QtCore.QRect(640, 680, 141, 31))
         self.pushButton_2.setObjectName("pushButton_2")
-
-        # checkBox manual or auto
-        self.manual = QtWidgets.QCheckBox(self.centralwidget)
-        self.manual.setChecked(True)
-        self.manual.setText("Вручную")
-        self.manual.setGeometry(QtCore.QRect(790, 490, 141, 31))
-        self.manual.setObjectName("manual")
-
-        # label ip adress
-        self.label_ip_adress = QtWidgets.QLabel(self.centralwidget)
-        self.label_ip_adress.setGeometry(QtCore.QRect(790, 510, 141, 31))
-        self.label_ip_adress.setObjectName("label_ip_adress")
-
-        # ip_adress
-        self.ip_adress = QtWidgets.QTextEdit(self.centralwidget)
-        self.ip_adress.setGeometry(QtCore.QRect(790, 535, 141, 31))
-        self.ip_adress.setEnabled(False)
-        self.ip_adress.setObjectName("textEdit")
-        self.ip_adress.setText("192.168.0.7")
-
-        # label port
-        self.label_port = QtWidgets.QLabel(self.centralwidget)
-        self.label_port.setGeometry(QtCore.QRect(790, 555, 141, 31))
-        self.label_port.setObjectName("label_port")
-
-        # port
-        self.port = QtWidgets.QTextEdit(self.centralwidget)
-        self.port.setGeometry(QtCore.QRect(790, 580, 141, 31))
-        self.port.setEnabled(False)
-        self.port.setObjectName("port")
-        self.port.setText("5025")
-
-        # Соединение
-        self.connection_bp = QtWidgets.QPushButton(self.centralwidget)
-        self.connection_bp.setEnabled(True)
-        self.connection_bp.setGeometry(QtCore.QRect(790, 620, 141, 31))
-        self.connection_bp.setEnabled(False)
-        self.connection_bp.setObjectName("connection_bp")
-
-        # Откалибровать
-        self.calib = QtWidgets.QPushButton(self.centralwidget)
-        self.calib.setGeometry(QtCore.QRect(790, 680, 141, 31))
-        self.calib.setObjectName("calib")
-
-
 
         self.tableView_model = QStandardItemModel()
         self.tableView = QtWidgets.QTableView(self.centralwidget)
@@ -218,6 +170,8 @@ class Ui_MainWindow(object):
         self.ts_ti_off.setText("Отключить ТС/ТИ")
         self.ts_ti_off.setEnabled(False)
 
+
+
         self.stringlistmodel = QStringListModel()  # Create stringlistmodel object
         self.string_list = []
         self.stringlistmodel.setStringList(self.string_list)  # assign data to model
@@ -261,10 +215,6 @@ class Ui_MainWindow(object):
         MainWindow.setWindowTitle(_translate("MainWindow", "Стенд ASR"))
         self.pushButton.setText(_translate("MainWindow", "Соединить"))
         self.pushButton_2.setText(_translate("MainWindow", "Разъединить"))
-        self.calib.setText(_translate("MainWindow", "Калибровка"))
-        self.connection_bp.setText(_translate("MainWindow", "Соединить"))
-        self.label_ip_adress.setText(_translate("MainWindow", "Ip adress"))
-        self.label_port.setText(_translate("MainWindow", "Port"))
         self.label_2.setText(_translate("MainWindow", "Адрес ASR"))
         self.label_3.setText(_translate("MainWindow", "COM порт"))
         self.ch1.setText(_translate("MainWindow", "Канал 1"))
